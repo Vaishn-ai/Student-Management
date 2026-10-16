@@ -15,7 +15,7 @@ class Batch(Base):
     start_time : Mapped[str] = mapped_column(String)
     end_time : Mapped[str] = mapped_column(String)
 
-    course_name : Mapped[str] = mapped_column(ForeignKey("courses.name"))
+    course_id : Mapped[str] = mapped_column(ForeignKey("courses.id"), nullable = False)
 
     created_at : Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     active_at : Mapped[bool] = mapped_column(Boolean, default=True)
