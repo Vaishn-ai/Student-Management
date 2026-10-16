@@ -9,7 +9,7 @@ class Course(Base):
     __tablename__ = "courses"
 
     id : Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    course_name : Mapped[str] = mapped_column(String)
+    name : Mapped[str] = mapped_column(String)
     description : Mapped[str] = mapped_column(String)
     overview : Mapped[str] = mapped_column(String)
     document : Mapped[str] = mapped_column(String)
