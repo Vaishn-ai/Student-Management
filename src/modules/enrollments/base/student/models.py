@@ -11,7 +11,7 @@ class Enrollment(Base):
 
     id : Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     course_id : Mapped[int] = mapped_column(ForeignKey("courses.id"), nullable = False)
-    batch_id : Mapped[int] = mapped_column(ForeignKey("batches.id"), nullable=False),
+    batch_id : Mapped[int] = mapped_column(ForeignKey("batches.id"), nullable=False)
     student_id : Mapped[int] = mapped_column(ForeignKey("students.id"), nullable = False)
 
     created_at : Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
